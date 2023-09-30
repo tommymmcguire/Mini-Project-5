@@ -14,5 +14,6 @@
 
 ### Example of usage:
 
+<img width="940" alt="Screen Shot 2023-09-30 at 3 07 35 PM" src="https://github.com/tommymmcguire/sqlite-lab-mcg/assets/141086024/80201295-0b4f-474f-b2aa-7320cfe48b9b">
 
 
