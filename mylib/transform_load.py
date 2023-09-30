@@ -15,9 +15,30 @@ def load(dataset="/workspaces/sqlite-lab-mcg/master/IMDB-Movie-Data.csv"):
     conn = sqlite3.connect('IMDB_Movie_Data.db')
     c = conn.cursor()
     c.execute("DROP TABLE IF EXISTS IMDB_Movie_Data")
-    c.execute("CREATE TABLE IMDB_Movie_Data (rank, title, genre, description, director, actors, year, runtime minutes, rating, votes, revenue_millions, metascore)")
-    #insert
-    c.executemany("INSERT INTO IMDB_Movie_Data VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", payload)
+    create_table_query = """
+        CREATE TABLE IF NOT EXISTS IMDB_Movie_Data (
+            rank INTEGER,
+            title TEXT,
+            genre TEXT,
+            description TEXT,
+            director TEXT,
+            actors TEXT,
+            year INTEGER,
+            runtime_minutes INTEGER,
+            rating REAL,
+            votes INTEGER,
+            revenue_millions REAL,
+            metascore INTEGER
+        )
+    """
+    c.execute(create_table_query)
+
+    # Insert data
+    insert_query = """
+        INSERT INTO IMDB_Movie_Data 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    """
+    c.executemany(insert_query, payload)
     conn.commit()
     conn.close()
     return "IMDB_Movie_Data.db"
