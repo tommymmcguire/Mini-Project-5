@@ -5,6 +5,7 @@
 * Extracts a dataset from 'https://raw.githubusercontent.com/laxmimerit/All-CSV-ML-Data-Files-Download/master/IMDB-Movie-Data.csv'
 * Transforms the data by cleaning, filtering, enriching, etc to get it ready for analysis.
 * Loads the transformed data into a SQLite database table using Python's sqlite3 module.
+* Preforms CRUD operations: Create, Read, Update, and Delete
 * Writes and executes SQL queries on the SQLite database to analyze and retrieve insights from the data.
 
 #### Queries
