@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/tommymmcguire/Mini-Project-5/actions/workflows/python.yml/badge.svg)](https://github.com/tommymmcguire/Mini-Project-5/actions)
+[![Build Status](https://github.com/tommymmcguire/Mini-Project-5/actions/workflows/cicd.yml/badge.svg)](https://github.com/tommymmcguire/Mini-Project-5/actions)
 
 ## Mini Project 5
 
