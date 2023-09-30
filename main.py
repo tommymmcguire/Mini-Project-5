@@ -19,5 +19,5 @@ print("Querying data...")
 query()
 
 # Query best movie
-print("Querying best movie...")
+print("Querying top 3 movies...")
 query_best()
